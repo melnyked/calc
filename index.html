@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Калькулятор електроенергії</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="page">
+<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+			<p class="browserupgrade">Ви використовуєте <strong>застарілий</strong> браузер. Будь ласка <a href="http://browsehappy.com/">оновіть свій браузер</a> оновіть свій досвід.</p>
+<![endif]-->
+	<form class="page__question question" action="#" method="post">
+		Який у вас встановлений лічильник?<br>
+		<label class="question__item item"><input class="item__questionVariant" type="radio" name="firstQuestion" id="oneTarCounter" value="oneTarCounter"> Однозонний</label><br>
+		<label class="question__item item"><input class="item__questionVariant" type="radio" name="firstQuestion" id="twoTarCounter" value="twoTarCounter"> Двозонний</label><br>
+		<label class="question__item item"><input class="item__questionVariant" type="radio" name="firstQuestion" id="threeTarCounter" value="threeTarCounter"> Тризонний</label><br>
+	</form>
+	<form class="page__form form" action="#" method="post">
+
+
+		<fieldset class="form__section section">
+			<legend class="section__legend legend">Будь ласка введіть значення</legend>
+			<table class="section__table table">
+				<tr class="table__row row">
+					<th class="rov__item">Поточні показники лічильника</th>
+					<th class="rov__item"><input type="number" name="currentOneTariff" id="currentOneTariff" placeholder="000000"></th>
+				</tr>
+				<tr class="table__row row">
+					<th class="rov__item">Попередні показники лічильника</th>
+					<th class="rov__item"><input type="number" name="earlierOneTariff" id="earlierOneTariff" placeholder="000000"></th>
+				</tr>
+			</table>
+		</fieldset>
+
+
+		<fieldset class="form__section section">
+			<legend class="section__legend legend">Будь ласка введіть значення</legend>
+			<table class="section__table table">
+				<tr class="table__row row">
+					<th class="row__item"></th>
+					<th class="row__item">Денне споживання</th>
+					<th class="row__item">Нічне споживання</th>
+				</tr>
+				<tr class="table__row row">
+					<th class="rov__item">Поточні показники лічильника</th>
+					<th class="rov__item"><input type="number" name="currentTwoTariffDay" id="currentTwoTariffDay" placeholder="000000"></th>
+					<th class="rov__item"><input type="number" name="currentTwoTariffNight" id="currentTwoTariffNight" placeholder="000000"></th>
+				</tr>
+				<tr class="table__row row">
+					<th class="rov__item">Попередні показники лічильника</th>
+					<th class="rov__item"><input type="number" name="earlierTwoTariffDay" id="earlierTwoTariffDay" placeholder="000000"></th>
+					<th class="rov__item"><input type="number" name="earlierTwoTariffNight" id="earlierTwoTariffNight" placeholder="000000"></th>
+				</tr>
+			</table>
+		</fieldset>
+		
+
+		<fieldset class="form__section section">
+			<legend class="section__legend legend">Будь ласка введіть значення</legend>
+			<table class="section__table table">
+				<tr class="table__row row">
+					<th class="row__item"></th>
+					<th class="row__item">Споживання в пік</th>
+					<th class="row__item">Споживання в напівпік</th>
+					<th class="row__item">Споживання вночі</th>
+				</tr>
+				<tr class="table__row row">
+					<th class="rov__item">Поточні показники лічильника</th>
+					<th class="rov__item"><input type="number" name="currentThreeTariffPeack" id="currentThreeTariffPeack" placeholder="000000"></th>
+					<th class="rov__item"><input type="number" name="currentThreeTariffhalf" id="currentThreeTariffhalf" placeholder="000000"></th>
+					<th class="rov__item"><input type="number" name="currentThreeTariffNight" id="currentThreeTariffNight" placeholder="000000"></th>
+				</tr>
+				<tr class="table__row row">
+					<th class="rov__item">Попередні показники лічильника</th>
+					<th class="rov__item"><input type="number" name="earlierThreeTariffPeack" id="earlierThreeTariffPeack" placeholder="000000"></th>
+					<th class="rov__item"><input type="number" name="earlierThreeTariffhalf" id="earlierThreeTariffhalf" placeholder="000000"></th>
+					<th class="rov__item"><input type="number" name="earlierThreeTariffNight" id="earlierThreeTariffNight" placeholder="000000"></th>
+				</tr>
+			</table>
+		</fieldset>
+			<button class="form__btn btn btn--submit" id="btn">Розрахувати вартість споживання</button>
+			<input class="form__btn btn btn--reset" type="reset" name="reset" value="Очистити">
+	</form>
+	<div class="page__out out" id="out">
+		Вивід інформації
+	</div>
+
+	<!-- script -->
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
